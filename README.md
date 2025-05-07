@@ -24,8 +24,6 @@ Il propose un design brutaliste, un quiz sécurisé, une calculatrice, un formul
 - **Calculatrice** sur une page dédiée
 - **Formulaire de contact** (redirection vers success.html)
 - **Design brutaliste** (fond noir, texte vert, police monospace, grosses bordures)
-- **Aucun lien externe (GitHub) dans le site, tout est local**
-- **Fichier README** pour l’évaluation
 
 ## Remarques techniques
 
