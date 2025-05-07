@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sécurisé</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .brutal-border {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .brutal-btn:hover, .brutal-btn.selected {
+            background: var(--brutal-green);
+            color: black;
+        }
+        .terminal {
+            background-color: #000;
+            color: #0f0;
+            font-family: monospace;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 700px;
+            height: 400px;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: 8px 8px 0 #00FF00;
+            border: 3px solid #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">QUIZ SÉCURISÉ</h1>
+            <div class="divider"></div>
+        </header>
+
+        <main>
+            <section class="brutal-border p-8 mb-12 bg-black">
+                <div id="question-container"></div>
+            </section>
+
+            <div class="text-center">
+                <button id="terminal-btn" class="brutal-btn">Terminal BruteForce</button>
+            </div>
+        </main>
+        
+        <footer class="mt-16 text-center text-lg font-bold" style="border-top: 3px solid #00FF00; padding-top: 16px;">
+            © 2025 - Brutaliste. Fait avec ❤️ et beaucoup de YAML.
+        </footer>
+    </div>
+
+    <div class="terminal" id="terminal">
+        <div class="terminal-content">
+            BruteForce Terminal v1.0
+            > Initializing hack process...
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

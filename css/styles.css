@@ -1,0 +1,44 @@
+:root {
+    --brutal-green: #00FF00;
+    --brutal-bg: #000000;
+}
+
+body {
+    background-color: var(--brutal-bg);
+    color: var(--brutal-green);
+    font-family: 'Courier New', monospace;
+}
+
+.brutal-border {
+    border: 3px solid var(--brutal-green);
+    box-shadow: 8px 8px 0 var(--brutal-green);
+}
+
+.brutal-btn {
+    background: black;
+    color: var(--brutal-green);
+    border: 2px solid var(--brutal-green);
+    padding: 15px 30px;
+    transition: all 0.3s;
+}
+
+.brutal-btn:hover {
+    background: var(--brutal-green);
+    color: black;
+}
+
+.terminal {
+    background-color: #000;
+    color: #0f0;
+    border: 3px solid var(--brutal-green);
+    box-shadow: 8px 8px 0 var(--brutal-green);
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    z-index: 1000;
+}

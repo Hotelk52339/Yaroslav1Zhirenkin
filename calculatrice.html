@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="business">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Brutale</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .calculator {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 20px;
+            background: #000;
+        }
+        #display {
+            background: black;
+            border: 2px solid var(--brutal-green);
+            color: var(--brutal-green);
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .btn-calc {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 20px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .btn-calc:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+        .brutal-btn:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="grid grid-cols-4 gap-2">
+                <button class="btn-calc" onclick="clearDisplay()">C</button>
+                <button class="btn-calc" onclick="appendToDisplay('/')">/</button>
+                <button class="btn-calc" onclick="appendToDisplay('*')">×</button>
+                <button class="btn-calc" onclick="deleteLast()">⌫</button>
+                <button class="btn-calc" onclick="appendToDisplay('7')">7</button>
+                <button class="btn-calc" onclick="appendToDisplay('8')">8</button>
+                <button class="btn-calc" onclick="appendToDisplay('9')">9</button>
+                <button class="btn-calc" onclick="appendToDisplay('-')">-</button>
+                <button class="btn-calc" onclick="appendToDisplay('4')">4</button>
+                <button class="btn-calc" onclick="appendToDisplay('5')">5</button>
+                <button class="btn-calc" onclick="appendToDisplay('6')">6</button>
+                <button class="btn-calc" onclick="appendToDisplay('+')">+</button>
+                <button class="btn-calc" onclick="appendToDisplay('1')">1</button>
+                <button class="btn-calc" onclick="appendToDisplay('2')">2</button>
+                <button class="btn-calc" onclick="appendToDisplay('3')">3</button>
+                <button class="btn-calc" onclick="calculate()" style="grid-row: span 2">=</button>
+                <button class="btn-calc" onclick="appendToDisplay('0')" style="grid-column: span 2">0</button>
+                <button class="btn-calc" onclick="appendToDisplay('.')">.</button>
+            </div>
+            <div class="text-center">
+                <a href="index.html" class="brutal-btn">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-16 text-center text-lg font-bold" style="border-top: 3px solid #00FF00; padding-top: 16px;">
+        © 2025 - Brutaliste. Fait avec ❤️ et beaucoup de YAML.
+    </footer>
+
+    <script>
+        const display = document.getElementById('display');
+        
+        function appendToDisplay(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function deleteLast() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Erreur';
+            }
+        }
+    </script>
+</body>
+</html>

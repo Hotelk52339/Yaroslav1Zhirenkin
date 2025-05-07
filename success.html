@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Message envoyé !</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .brutal-border {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+        .brutal-btn:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
+        <div class="brutal-border p-8 text-center bg-black max-w-lg">
+            <h1 class="text-3xl font-bold mb-6">✅ Merci pour votre message !</h1>
+            <p class="text-xl mb-8">
+                Votre message a bien été envoyé.<br />
+                Je vous répondrai dès que possible.
+            </p>
+            <a href="index.html" class="brutal-btn">Retour à l'accueil</a>
+        </div>
+        <footer class="mt-16 text-center text-lg font-bold" style="border-top: 3px solid #00FF00; padding-top: 16px; width: 100%;">
+            © 2025 - Brutaliste. Fait avec ❤️ et beaucoup de YAML.
+        </footer>
+    </div>
+</body>
+</html>

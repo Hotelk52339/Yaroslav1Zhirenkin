@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛔ Accès Refusé</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .brutal-border {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+        }
+        .brutal-btn:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
+        <div class="brutal-border p-8 text-center bg-black max-w-lg">
+            <div class="mb-8 text-7xl">⛔</div>
+            <h1 class="text-3xl font-bold mb-6">Accès Refusé</h1>
+            <p class="text-xl mb-8">Essayez de nouveau.</p>
+            <a href="index.html" class="brutal-btn">Retour à l'accueil</a>
+        </div>
+        <footer class="mt-16 text-center text-sm opacity-70 w-full">
+            &copy; 2025 - Brutaliste
+        </footer>
+    </div>
+</body>
+</html>

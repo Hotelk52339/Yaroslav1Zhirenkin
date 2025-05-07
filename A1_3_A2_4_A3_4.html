@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Secret - Yaroslav Zhirenkin</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .brutal-border {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+        }
+        .brutal-btn:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+        input, textarea {
+            background: #000;
+            color: #00FF00;
+            border: 2px solid #00FF00;
+            font-family: 'Courier New', monospace;
+        }
+        label {
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold mb-4">CONTACT SECRET</h1>
+            <div class="divider" style="border-color: var(--brutal-green)"></div>
+            <p class="text-xl mb-8">Bravo, tu as passé le quiz !</p>
+        </header>
+        <main>
+            <section class="brutal-border p-8 mb-12 bg-black max-w-xl mx-auto">
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="nom" class="block mb-2">Nom</label>
+                        <input type="text" id="nom" name="nom" class="w-full p-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-2" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2">Message</label>
+                        <textarea id="message" name="message" class="w-full p-2" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="brutal-btn w-full">Envoyer</button>
+                </form>
+            </section>
+            <div class="text-center">
+                <a href="index.html" class="brutal-btn">Retour à l'accueil</a>
+            </div>
+        </main>
+        <footer class="mt-16 text-center text-lg font-bold" style="border-top: 3px solid #00FF00; padding-top: 16px;">
+            © 2025 - Brutaliste. Fait avec ❤️ et beaucoup de YAML.
+        </footer>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'success.html';
+        });
+    </script>
+</body>
+</html>

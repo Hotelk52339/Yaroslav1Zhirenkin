@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="business">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaroslav Zhirenkin - Brutalist Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --brutal-green: #00FF00;
+            --brutal-bg: #000000;
+        }
+        body {
+            background-color: var(--brutal-bg);
+            color: var(--brutal-green);
+            font-family: 'Courier New', monospace;
+        }
+        .brutal-border {
+            border: 3px solid var(--brutal-green);
+            box-shadow: 8px 8px 0 var(--brutal-green);
+        }
+        .brutal-btn {
+            background: black;
+            color: var(--brutal-green);
+            border: 2px solid var(--brutal-green);
+            padding: 15px 30px;
+            transition: all 0.3s;
+        }
+        .brutal-btn:hover {
+            background: var(--brutal-green);
+            color: black;
+        }
+        a {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- En-tête -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold mb-4">YAROSLAV ZHIRENKIN</h1>
+            <div class="divider" style="border-color: var(--brutal-green)"></div>
+        </header>
+
+        <!-- Section Principale -->
+        <main>
+            <!-- Bio -->
+            <section class="brutal-border p-8 mb-12 bg-black">
+                <h2 class="text-2xl mb-4">// À PROPOS DE MOI</h2>
+                <p class="mb-4">
+                    <strong>Étudiant en cybersécurité à l’EPITA</strong>, je plonge chaque jour dans des sujets comme la sécurité réseau, l’ethical hacking, la cryptographie, le hardening système et l’architecture sécurisée. C’est un cursus exigeant, mais je l’adore - surtout parce qu’il est très pratique. On ne fait pas que de la théorie : on s’entraîne sur des scénarios attaque/défense, on participe à des CTF (Capture The Flag) et on explore les outils et vulnérabilités du monde réel. C’est intense, mais c’est exactement le genre de défi que j’aime.<br>
+                </p>
+                <p class="mb-4">
+                    En dehors des cours, je suis passionné par <strong>Home Assistant</strong>. J’adore la flexibilité et le contrôle que la plateforme offre - tout est géré en YAML, ce qui rend le système propre, lisible et totalement personnalisable. Le côté open source me permet de comprendre comment tout fonctionne, et même de contribuer si j’en ai envie.
+                </p>
+                <p class="mb-4">
+                    Grâce à Home Assistant, j’ai découvert <strong>ESPHome</strong>. Flasher des ESP32 ou ESP8266 pour piloter lumières, capteurs ou relais, c’est ultra satisfaisant - surtout quand l’intégration dans Home Assistant se fait automatiquement. Cette magie de la découverte automatique, c’est juste magnifique.
+                </p>
+                <p class="mb-4">
+                    Pour la sécurité de la maison, j’utilise <strong>Frigate</strong> avec un Google Coral TPU : détection vidéo en temps réel, ultra-efficace, tout en local. J’aime le fait que Frigate distingue les objets, filtre le bruit et donne des alertes vraiment pertinentes, sans cloud. Ça colle parfaitement à ma vision de la cybersécurité : tout reste local, privé, et sous mon contrôle.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="brutal-border p-4">
+                        <h3 class="text-xl mb-2">🛠️ Stack Technique</h3>
+                        <ul>
+                            <li>- Home Assistant Core</li>
+                            <li>- Zigbee2MQTT</li>
+                            <li>- ESP32/8266</li>
+                            <li>- Frigate + Coral TPU</li>
+                        </ul>
+                    </div>
+                    <div class="brutal-border p-4">
+                        <h3 class="text-xl mb-2">🔗 Protocoles</h3>
+                        <ul>
+                            <li>- Zigbee (ZHA)</li>
+                            <li>- MQTT</li>
+                            <li>- HTTP API</li>
+                        </ul>
+                    </div>
+                    <div class="brutal-border p-4">
+                        <h3 class="text-xl mb-2">💻 Dev</h3>
+                        <ul>
+                            <li>- Python</li>
+                            <li>- YAML</li>
+                            <li>- JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                <a href="questionnaire.html" class="brutal-btn">QUIZ SÉCURISÉ</a>
+                <a href="calculatrice.html" class="brutal-btn">CALCULATRICE BRUTALE</a>
+            </div>
+        </main>
+
+        <footer class="mt-16 text-center text-lg font-bold" style="border-top: 3px solid #00FF00; padding-top: 16px;">
+            © 2025 - Brutaliste. Fait avec ❤️ et beaucoup de YAML.
+        </footer>
+    </div>
+</body>
+</html>
